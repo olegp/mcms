@@ -1,0 +1,21 @@
+{
+  "name": "mcms",
+  "keywords": ["cms", "blog", "commonjs"],
+  "description": "CommonJS compatible Minimal CMS",
+  "version": "0.1.0",
+  "author": "Oleg Podsechin <oleg@ionsquare.com>",
+  "directories" : {
+    "lib" : "./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/olegp/mcms.git"
+  },
+  "main": "./lib/mcms.js",
+  "engines": { "node": ">= 0.4.0" },
+  "dependencies" : { "mustache": ">= 0.3.0", "github-flavored-markdown": ">= 1.0.0" },
+  "devDependencies" : {
+  	"common-node": ">= 0.1.0"
+  },
+  "licenses": [ { "type": "MIT" } ]
+}
