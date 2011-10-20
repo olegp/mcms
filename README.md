@@ -71,7 +71,7 @@ It is possible to get a list of all the pages on the site via the `{{ascending}}
 
     {{ascending}} <a href="{{link}}">{{title}}</a> {{/ascending}}
     
-The pages are listed in a ascending lexicographic order, to get them in reverse use `{{descending}}`. If you have a list of blog posts which you would like to list in reverse chronological order, you can add an additional prefix used for sorting to the file name, e.g. `20101010|First post!.md` and use descending order to display a list of posts in reverse chronological order. Everything up to and including the `|` separator is used for sorting, but ignored when constructing page titles.
+The pages above are listed in an ascending lexicographic order. To get them in reverse use `{{descending}}`. If you have a list of blog posts which you would like to list in reverse chronological order, you can add an additional prefix used for sorting to the file name, e.g. `20101010|First post!.md` and use descending order to display a list of posts in reverse chronological order. Everything up to and including the `|` separator is used for sorting, but ignored when constructing page titles.
     
 #### Custom Error Pages
 
