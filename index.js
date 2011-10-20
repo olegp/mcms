@@ -3,6 +3,7 @@ var markdown = require('github-flavored-markdown').parse;
 var mustache = require('mustache').to_html;
 
 var PAGES = './pages', TEMPLATES = './templates', STATIC = './static', SEPARATOR = '|';
+var ABSOLUTE_STATIC = fs.absolute(STATIC);
 
 var MIME_TYPES = {
 	".css": "text/css",
@@ -63,9 +64,9 @@ fs.listTree(TEMPLATES).splice(1).forEach(function(file) {
 exports.app = function(request) {
 	var uri = request.pathInfo.substr(1);
 	if(!uri.indexOf('static')) {
-		// TODO remove .. and the likes
-		var file = fs.join(STATIC, uri.substr('static'.length + 1));
-		if(fs.exists(file)) {
+		var file = fs.absolute(fs.join(ABSOLUTE_STATIC, uri
+				.substr('static'.length + 1)));
+		if(!file.indexOf(ABSOLUTE_STATIC) && fs.exists(file)) {
 			return {
 				status: 200,
 				'Content-Type': MIME_TYPES[fs.extension(file)],
@@ -89,7 +90,7 @@ exports.app = function(request) {
 				|| templates['index'];
 		// TODO inject templates as well -- or separate them out into "partials"?
 		page.body = mustache(template, {
-			//TODO deal with case when title == 'index'
+			// TODO deal with case when title == 'index'
 			title: page.title,
 			body: markdown(md)
 		});
