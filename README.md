@@ -55,7 +55,7 @@ This SEO friendly URL is then used to access the given page. To get a list of al
 
 #### Page Sub-directories
 
-It is possible to places pages in sub-directories. For example a page in the file `./pages/hello/world.md` is accessible at `/hello/world`.
+It is possible to place pages in sub-directories. For example a page in the file `./pages/hello/world.md` is accessible at `/hello/world`.
 
 #### Custom Templates
 
@@ -67,9 +67,11 @@ It is possible to include reusable blocks of HTML across different templates by 
 
 #### List of Pages
 
-It is possible to get a list of all the pages on the site via the `{{list}}` array. For example, this renders a bunch of links to all the pages:
+It is possible to get a list of all the pages on the site via the `{{ascending}}` array. For example, this renders a bunch of links to all the pages:
 
-    {{list}} <a href="{{link}}">{{title}}</a> {{/list}}
+    {{ascending}} <a href="{{link}}">{{title}}</a> {{/ascending}}
+    
+The pages are listed in a ascending lexicographic order, to get them in reverse use `{{descending}}`. If you have a list of blog posts which you would like to list in reverse chronological order, you can add an additional prefix used for sorting to the file name, e.g. `20101010|First post!.md` and use descending order to display a list of posts in reverse chronological order. Everything up to and including the `|` separator is used for sorting, but ignored when constructing page titles.
     
 #### Custom Error Pages
 
