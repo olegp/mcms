@@ -18,7 +18,7 @@ Install MCMS with `git clone git://github.com/olegp/mcms.git`, then `cd mcms` an
 
 #### Viewing a Site
 
-Once the server is running, open [http://localhost:8080](http://localhost:8080) with your browser - you should see the contents of this README.
+Once the server is running, open [http://localhost:8080](http://localhost:8080) with your browser - you should see the contents of this README. Note that by default MCMS caches the generated HTML in memory, so if you update the template or pages, you will need to restart your server.
 
 #### Creating a Site
 
