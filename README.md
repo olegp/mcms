@@ -6,7 +6,7 @@ By being built on top of the [CommonJS](http://commonjs.org) [Filesystem/A](http
 
 ### Usage
 
-If you're on Node, install MCMS with `npm install mcms` (TODO: publish to npm). Also make sure that you have [Common Node](https://github.com/olegp/common-node/#readme) installed as a global package (via `npm install -g common-node`). To test that it's working, run `common-node node_modules/mcms`. Then open [http://localhost:8080](http://localhost:8080) with your browsers - you should see the contents of this README.
+If you're on Node, install MCMS with `npm install mcms`. Also make sure that you have [Common Node](https://github.com/olegp/common-node/#readme) installed as a global package (via `npm install -g common-node`). To test that it's working, run `common-node node_modules/mcms`. Then open [http://localhost:8080](http://localhost:8080) with your browsers - you should see the contents of this README.
 
 The easiest way to get started with a new site is to clone an already existing one and modify it to get the site you want (TODO: add link to repo). Alternatively, if you're starting from scratch you can also create a directory for your site. Inside it, add a single file named `index.js` with the following line:
 
