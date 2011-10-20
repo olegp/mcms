@@ -1,7 +1,6 @@
 # MCMS
 
-MCMS is a fast Minimal CMS written in server side JavaScript. It uses only the 
-file system and as such runs without a database. [Mustache](http://mustache.github.com/) is used for defining the templates and [GitHub flavored Markdown](https://github.com/isaacs/github-flavored-markdown) for the pages. It also includes basic support for creating a list of links to all pages, making it possible to use it as a simple blog.
+MCMS is a fast Minimal CMS written in server side JavaScript. It uses only the file system and as such runs without a database. [Mustache](http://mustache.github.com/) is used for defining the templates and [GitHub flavored Markdown](https://github.com/isaacs/github-flavored-markdown) for the pages. It also includes basic support for creating a list of links to all pages, making it possible to use it as a simple blog.
 
 By being built on top of the [CommonJS](http://commonjs.org) [Filesystem/A](http://wiki.commonjs.org/wiki/Filesystem/A) and [JSGI 0.3](http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2) specs, it runs on any server side JavaScript platform, such as Node.js (via [Common Node](http://olegp.github.com/common-node/)) and [RingoJS](http://ringojs.org).
 
@@ -27,6 +26,11 @@ To serve the site, run `common-node .` inside the site directory. For an example
 * including partial HTML files in one or more templates
 * including partial Markdown (md) files in one or more templates 
 * including a list of all the pages for a blog
+
+### Acknowledgements
+
+  * [Jan Lehnardt](http://github.com/janl/) for the CommonJS implementation of Mustache
+  * [Isaac Schlueter](http://github.com/isaacs/) for the `github-flavored-markdown` package
 
 ### License 
 
