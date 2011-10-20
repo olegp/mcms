@@ -89,6 +89,7 @@ exports.app = function(request) {
 				|| templates['index'];
 		// TODO inject templates as well -- or separate them out into "partials"?
 		page.body = mustache(template, {
+			//TODO deal with case when title == 'index'
 			title: page.title,
 			body: markdown(md)
 		});
