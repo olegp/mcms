@@ -1,12 +1,26 @@
 # MCMS
 
-MCMS is a fast Minimal CMS written in server side JavaScript. It uses only the file system and as such runs without a database. [Mustache](http://mustache.github.com/) is used for defining the templates and [GitHub flavored Markdown](https://github.com/isaacs/github-flavored-markdown) for the pages. It also includes basic support for creating a list of links to all pages, making it possible to use it as a simple blog.
+MCMS is a fast Minimal CMS written in server side JavaScript. It uses only the file system and as such runs without a database. [Mustache](http://mustache.github.com/) is used for defining the templates and [GitHub flavored Markdown](https://github.com/isaacs/github-flavored-markdown) for the pages. It includes support for creating a list of links to all pages, making it possible to use it as a simple blog.
 
 By being built on top of the [CommonJS](http://commonjs.org) [Filesystem/A](http://wiki.commonjs.org/wiki/Filesystem/A) and [JSGI 0.3](http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2) specs, it runs on any server side JavaScript platform, such as Node.js (via [Common Node](http://olegp.github.com/common-node/)) and [RingoJS](http://ringojs.org).
 
 ### Usage
 
-If you're on Node, install MCMS with `npm install mcms`. Also make sure that you have [Common Node](https://github.com/olegp/common-node/#readme) installed as a global package (via `npm install -g common-node`). To test that it's working, run `common-node node_modules/mcms`. Then open [http://localhost:8080](http://localhost:8080) with your browsers - you should see the contents of this README.
+#### Node
+
+Install MCMS with `npm install mcms`. Also make sure that you have [Common Node](https://github.com/olegp/common-node/#readme) installed as a global package (via `npm install -g common-node`). Run `common-node node_modules/mcms` to start the server. 
+
+#### RingoJS
+
+Install the Markdown package with `ringo-admin install https://github.com/isaacs/giub-flavored-markdown/zipball/master`.
+
+Install MCMS with `git clone git://github.com/olegp/mcms.git`, then `cd mcms` and start the server with `ringo ./lib/mcms.js`.
+
+#### Viewing a Site
+
+Once the server is running, open [http://localhost:8080](http://localhost:8080) with your browser - you should see the contents of this README.
+
+#### Creating a Site
 
 The easiest way to get started with a new site is to clone an already existing one and modify it to get the site you want (TODO: add link to repo). Alternatively, if you're starting from scratch you can also create a directory for your site. Inside it, add a single file named `index.js` with the following line:
 
