@@ -36,10 +36,44 @@ To serve the site, run `common-node .` inside the site directory. For an example
 
 ### Features
 
-* over-riding the default (index) template on a per page basis
-* including partial HTML files in one or more templates
-* including partial Markdown (md) files in one or more templates 
-* including a list of all the pages for a blog
+### Custom Page Titles
+
+The name of the file in the `./pages` directory becomes the page title, and is accessible via `{{title}}` inside templates.
+
+### SEO friendly URLs
+
+The name of the file is converted to an SEO friendly format which involves:
+
+* converting all characters to lower case
+* converting all spaces to hyphers (-)
+* removing all non alpha, digit characters, hyphers or forward slashes
+* removing all occurrences of more than one hyphen & leading/trailing hyphens
+
+So, for example `Really Long & Weird Example!` becomes `really-long-weird-example`.
+
+This SEO friendly URL is then used to access the given page. To get a list of all the page titles and URLs, see the "List of Pages" section below.
+
+#### Page Sub-directories
+
+It is possible to places pages in sub-directories. For example a page in the file `./pages/hello/world.md` is accessible at `/hello/world`.
+
+#### Custom Templates
+
+By default, every page uses the `templates/index.html` template. It is possible to override this template on a per page basis by creating a template with a name that matches that of the page, e.g. a page at `./pages/custom.md` can have a custom template provided via `./templates/custom.html`.  
+
+#### Includes
+
+It is possible to include reusable blocks of HTML across different templates by placing `.html` or `.md` files in the optional `./includes` directory. For example an include `./includes/footer.html` can be included via `{{{footer}}}` (triple mustaches are needed to ensure that the HTML is not escaped). Markdown (.md) files are automatically converted to HTML.
+
+#### List of Pages
+
+It is possible to get a list of all the pages on the site via the `{{list}}` array. For example, this renders a bunch of links to all the pages:
+
+    {{list}} <a href="{{link}}">{{title}}</a> {{/list}}
+    
+#### Custom Error Pages
+
+It is possible to provide custom pages for HTTP file not found (404) errors. Simply create a file `./pages/404.md`.
 
 ### Acknowledgements
 
