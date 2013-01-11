@@ -24,7 +24,7 @@ Once the server is running, open [http://localhost:8080](http://localhost:8080) 
 
 The easiest way to get started with a new site is to clone an already existing one and modify it to get the site you want (TODO: add link to repo). Alternatively, if you're starting from scratch you can also create a directory for your site. Inside it, add a single file named `index.js` with the following line:
 
-    exports.app = require('mcms').app;
+    exports.app = require('mcms').mcms();
 
 In the same directory, create the following sub-directories:
 
