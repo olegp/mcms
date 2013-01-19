@@ -2,7 +2,7 @@
   "name": "mcms",
   "keywords": ["cms", "blog", "commonjs"],
   "description": "CommonJS compatible Minimal CMS",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Oleg Podsechin <oleg@ionsquare.com>",
   "directories" : {
     "lib" : "./lib"
