@@ -4,6 +4,8 @@ MCMS is a fast Minimal CMS written in server side JavaScript. It uses only the f
 
 By being built on top of the [CommonJS](http://commonjs.org) [Filesystem/A](http://wiki.commonjs.org/wiki/Filesystem/A) and [JSGI 0.3](http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2) specs, it runs on multiple server side JavaScript platforms, such as Node.js (via [Common Node](http://olegp.github.com/common-node/)) and [RingoJS](http://ringojs.org) (and as a result runs on Google's AppEngine and other Java hosting platforms).
 
+If you have any questions about using `mcms`, please post them to the [Common Node mailing list](https://groups.google.com/forum/#!forum/common-node).
+
 ### Usage
 
 #### Node
