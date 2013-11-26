@@ -14,7 +14,7 @@ Install MCMS with `npm install mcms`. Also make sure that you have [Common Node]
 
 #### RingoJS
 
-Install the Markdown package with `ringo-admin install https://github.com/isaacs/giub-flavored-markdown/zipball/master`.
+Install the Markdown package with `ringo-admin install https://github.com/isaacs/github-flavored-markdown/zipball/master`.
 
 Install MCMS with `git clone git://github.com/olegp/mcms.git`, then `cd mcms` and start the server with `ringo ./lib/mcms.js`.
 
