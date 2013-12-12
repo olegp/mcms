@@ -29,7 +29,7 @@
     "url": "git://github.com/olegp/mcms.git"
   },
   "homepage": "https://github.com/olegp/mcms/",
-  "main": "./lib/mcms.js",
+  "main": "./main.js",
   "engines": {
     "node": ">= 0.4.0"
   },
