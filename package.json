@@ -1,44 +1,47 @@
 {
-  "name":"mcms",
-  "keywords":["cms", "blog", "commonjs"],
-  "description":"CommonJS compatible Minimal CMS",
-  "version":"0.1.3",
-  "author":{
-    "name":"Oleg Podsechin",
-    "email":"oleg@ionsquare.com"
+  "name": "mcms",
+  "keywords": [
+    "cms",
+    "blog",
+    "commonjs"
+  ],
+  "description": "CommonJS compatible Minimal CMS",
+  "version": "0.1.3",
+  "author": {
+    "name": "Oleg Podsechin",
+    "email": "oleg@ionsquare.com"
   },
-  "contributors":[
+  "contributors": [
     {
-      "name":"Alex Lam",
-      "email":"alex.lam@starthq.com"
+      "name": "Alex Lam",
+      "email": "alex.lam@starthq.com"
     },
     {
-      "name":"Oleg Podsechin",
-      "email":"oleg@ionsquare.com"
+      "name": "Oleg Podsechin",
+      "email": "oleg@ionsquare.com"
     }
   ],
-  "directories":{
-    "lib":"./lib"
+  "directories": {
+    "lib": "./lib"
   },
-  "repository":{
-    "type":"git",
-    "url":"git://github.com/olegp/mcms.git"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/olegp/mcms.git"
   },
-  "homepage":"https://github.com/olegp/mcms/",
-  "main":"./lib/mcms.js",
-  "engines":{
-    "node":">= 0.4.0"
+  "homepage": "https://github.com/olegp/mcms/",
+  "main": "./lib/mcms.js",
+  "engines": {
+    "node": ">= 0.4.0"
   },
-  "dependencies":{
-    "mustache":">= 0.3.0",
-    "github-flavored-markdown":">= 1.0.0"
+  "dependencies": {
+    "mustache": ">= 0.3.0"
   },
-  "devDependencies":{
-    "common-node":">= 0.1.0"
+  "devDependencies": {
+    "common-node": ">= 0.1.0"
   },
-  "licenses":[
+  "licenses": [
     {
-      "type":"MIT"
+      "type": "MIT"
     }
   ]
 }
