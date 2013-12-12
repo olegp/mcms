@@ -1,6 +1,5 @@
 var COMMON_NODE = global.process;
 var mcms = require('./lib/mcms.js').mcms;
-var response = require('ringo/jsgi/response');
 
 exports.app = mcms();
 
