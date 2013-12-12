@@ -14,9 +14,9 @@ Install MCMS with `npm install mcms`. Also make sure that you have [Common Node]
 
 #### RingoJS
 
-Install the Markdown package with `ringo-admin install https://github.com/isaacs/github-flavored-markdown/zipball/master`.
+Install the Markdown package with `ringo-admin install https://github.com/chjj/marked/zipball/master`.
 
-Install MCMS with `git clone git://github.com/olegp/mcms.git`, then `cd mcms` and start the server with `ringo ./lib/mcms.js`.
+Install MCMS with `git clone git://github.com/olegp/mcms.git`, then `cd mcms` and start the server with `ringo main.js`.
 
 #### Viewing a Site
 
@@ -82,7 +82,7 @@ It is possible to provide custom pages for HTTP file not found (404) errors. Sim
 ### Acknowledgements
 
   * [Jan Lehnardt](http://github.com/janl/) for the CommonJS implementation of Mustache
-  * [Isaac Schlueter](http://github.com/isaacs/) for the `github-flavored-markdown` package
+  * [Christopher Jeffrey](http://github.com/chjj/) for the `marked` package
 
 ### License 
 

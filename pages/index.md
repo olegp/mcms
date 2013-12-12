@@ -2,7 +2,9 @@
 
 MCMS is a fast Minimal CMS written in server side JavaScript. It uses only the file system and as such runs without a database. [Mustache](http://mustache.github.com/) is used for defining the templates and [GitHub flavored Markdown](https://github.com/isaacs/github-flavored-markdown) for the pages. It includes support for creating a list of links to all pages, making it possible to use it as a simple blog.
 
-By being built on top of the [CommonJS](http://commonjs.org) [Filesystem/A](http://wiki.commonjs.org/wiki/Filesystem/A) and [JSGI 0.3](http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2) specs, it runs on multiple server side JavaScript platforms, such as Node.js (via [Common Node](http://olegp.github.com/common-node/)) and [RingoJS](http://ringojs.org).
+By being built on top of the [CommonJS](http://commonjs.org) [Filesystem/A](http://wiki.commonjs.org/wiki/Filesystem/A) and [JSGI 0.3](http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2) specs, it runs on multiple server side JavaScript platforms, such as Node.js (via [Common Node](http://olegp.github.com/common-node/)) and [RingoJS](http://ringojs.org) (and as a result runs on Google's AppEngine and other Java hosting platforms).
+
+If you have any questions about using `mcms`, please post them to the [Common Node mailing list](https://groups.google.com/forum/#!forum/common-node).
 
 ### Usage
 
@@ -12,9 +14,9 @@ Install MCMS with `npm install mcms`. Also make sure that you have [Common Node]
 
 #### RingoJS
 
-Install the Markdown package with `ringo-admin install https://github.com/isaacs/giub-flavored-markdown/zipball/master`.
+Install the Markdown package with `ringo-admin install https://github.com/chjj/marked/zipball/master`.
 
-Install MCMS with `git clone git://github.com/olegp/mcms.git`, then `cd mcms` and start the server with `ringo ./lib/mcms.js`.
+Install MCMS with `git clone git://github.com/olegp/mcms.git`, then `cd mcms` and start the server with `ringo main.js`.
 
 #### Viewing a Site
 
@@ -24,7 +26,7 @@ Once the server is running, open [http://localhost:8080](http://localhost:8080) 
 
 The easiest way to get started with a new site is to clone an already existing one and modify it to get the site you want (TODO: add link to repo). Alternatively, if you're starting from scratch you can also create a directory for your site. Inside it, add a single file named `index.js` with the following line:
 
-    exports.app = require('mcms').app;
+    exports.app = require('mcms').mcms();
 
 In the same directory, create the following sub-directories:
 
@@ -67,11 +69,11 @@ It is possible to include reusable blocks of HTML across different templates by 
 
 #### List of Pages
 
-It is possible to get a list of all the pages on the site via the `{{ascending}}` array. For example, this renders a bunch of links to all the pages:
+It is possible to get a list of all the pages on the site via the `{{#ascending}}` array. For example, this renders a bunch of links to all the pages:
 
-    {{ascending}} <a href="{{link}}">{{title}}</a> {{/ascending}}
+    {{#ascending}} <a href="{{link}}">{{title}}</a> {{/ascending}}
     
-The pages above are listed in an ascending lexicographic order. To get them in reverse use `{{descending}}`. If you have a list of blog posts which you would like to list in reverse chronological order, you can add an additional prefix used for sorting to the file name, e.g. `20101010|First post!.md` and use descending order to display a list of posts in reverse chronological order. Everything up to and including the `|` separator is used for sorting, but ignored when constructing page titles.
+The pages above are listed in an ascending lexicographic order. To get them in reverse use `{{#descending}}`. If you have a list of blog posts which you would like to list in reverse chronological order, you can add an additional prefix used for sorting to the file name, e.g. `20101010|First post!.md` and use descending order to display a list of posts in reverse chronological order. Everything up to and including the `|` separator is used for sorting, but ignored when constructing page titles.
     
 #### Custom Error Pages
 
@@ -80,7 +82,7 @@ It is possible to provide custom pages for HTTP file not found (404) errors. Sim
 ### Acknowledgements
 
   * [Jan Lehnardt](http://github.com/janl/) for the CommonJS implementation of Mustache
-  * [Isaac Schlueter](http://github.com/isaacs/) for the `github-flavored-markdown` package
+  * [Christopher Jeffrey](http://github.com/chjj/) for the `marked` package
 
 ### License 
 
